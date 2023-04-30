@@ -15,6 +15,8 @@ type AppDelegate() =
 
     override this.FinishedLaunching(app, options) =
         Forms.Init()
+        Syncfusion.XForms.iOS.Border.SfBorderRenderer.Init();
+        Syncfusion.XForms.iOS.Buttons.SfButtonRenderer.Init();
         this.LoadApplication(Program.startApplication App.program)
         base.FinishedLaunching(app, options)
 

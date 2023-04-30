@@ -1,5 +1,6 @@
 namespace SyncFusionFab
 
+open TherapyPal.Widgets
 open Xamarin.Forms
 open Fabulous.XamarinForms
 
@@ -23,19 +24,25 @@ module App =
         Application(
             ContentPage(
                 "SyncFusionFab",
-                VStack() {
-                    Label("Hello from Fabulous v2!")
-                        .font(namedSize = NamedSize.Title)
-                        .centerTextHorizontal()
+                (VStack() {
+                    SfBorder(
+                        VStack() {
+                            Label("Hello from Fabulous v2!")
+                                .font(namedSize = NamedSize.Title)
+                                .centerTextHorizontal ()
 
-                    (VStack() {
-                        Label($"Count is {model.Count}").centerTextHorizontal()
-
-                        Button("Increment", Increment)
-                        Button("Decrement", Decrement)
-                    })
-                        .centerVertical(expand = true)
-                }
+                            SfButton("Hello")
+                                .backgroundColour(Color.White.ToFabColor())
+                                .textColor(Color.Black.ToFabColor())
+                                .horizontalOptions(LayoutOptions.Center)
+                        }
+                    )
+                        .hasShadow(true)
+                        .borderThickness(Thickness(1.))
+                        .borderColour(Color.LightGray.ToFabColor())
+                        .cornerRadius(5.)
+                })
+                    .padding (Thickness(20.))
             )
         )
 
