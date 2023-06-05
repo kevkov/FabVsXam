@@ -5,22 +5,68 @@
              xmlns:local="clr-namespace:SyncFusionXam"
              xmlns:sfbtn="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:sfbor="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             x:Class="SyncFusionXam.MainPage">
-    <StackLayout Padding="20">
-        <sfbor:SfBorder 
-            HasShadow="True">
-            <!-- Place new controls here -->
-            <StackLayout>
-                <Label Text="Welcome to Xamarin.Forms!"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand" />
-                <sfbtn:SfButton 
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    Text="Hello"
-                    HorizontalOptions="Center"></sfbtn:SfButton>
-            </StackLayout>
-        </sfbor:SfBorder>
-    </StackLayout>
+             xmlns:sftv="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             x:Class="SyncFusionXam.MainPage"
+             Padding="10">
+    <!-- <StackLayout Padding="20"> -->
+    <!--     <sfbor:SfBorder  -->
+    <!--         HasShadow="True"> -->
+    <!--         ~1~ Place new controls here @1@ -->
+    <!--         <StackLayout> -->
+    <!--             <Label Text="Welcome to Xamarin.Forms!" -->
+    <!--                    HorizontalOptions="Center" -->
+    <!--                    VerticalOptions="CenterAndExpand" /> -->
+    <!--             <sfbtn:SfButton  -->
+    <!--                 BackgroundColor="Transparent" -->
+    <!--                 TextColor="Black" -->
+    <!--                 Text="Hello" -->
+    <!--                 HorizontalOptions="Center"></sfbtn:SfButton> -->
+    <!--         </StackLayout> -->
+    <!--     </sfbor:SfBorder> -->
+    <!-- </StackLayout> -->
 
+    <sftv:SfTabView TabHeight="36" VisibleHeaderCount="3">
+        <sftv:SfTabView.SelectionIndicatorSettings>
+            <sftv:SelectionIndicatorSettings StrokeThickness="0"/>
+        </sftv:SfTabView.SelectionIndicatorSettings>
+        <sftv:SfTabItem Title="Call" >
+            <sftv:SfTabItem.HeaderContent>
+                <sfbor:SfBorder CornerRadius="10." BorderColor="LightGray" HasShadow="True">
+                    <Grid BackgroundColor="White">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
+                    </Grid>
+                </sfbor:SfBorder>
+            </sftv:SfTabItem.HeaderContent>
+            
+            <sftv:SfTabItem.Content>
+                <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
+            </sftv:SfTabItem.Content>
+        </sftv:SfTabItem>
+        <sftv:SfTabItem Title="Favorites">
+            <sftv:SfTabItem.HeaderContent>
+                <sfbor:SfBorder Padding="-10, 0, 0, 0" BackgroundColor="LightGray" BorderColor="LightGray">
+                    <Grid>
+                        <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
+                    </Grid>
+                </sfbor:SfBorder>
+            </sftv:SfTabItem.HeaderContent>
+            
+            <sftv:SfTabItem.Content>
+                <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
+            </sftv:SfTabItem.Content>
+        </sftv:SfTabItem>
+        <sftv:SfTabItem Title="Contacts">
+            <sftv:SfTabItem.HeaderContent>
+                <sfbor:SfBorder CornerRadius="10." BorderColor="LightGray">
+                    <Grid>
+                        <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
+                    </Grid>
+                </sfbor:SfBorder>
+            </sftv:SfTabItem.HeaderContent>
+            
+            <sftv:SfTabItem.Content>
+                <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
+            </sftv:SfTabItem.Content>
+        </sftv:SfTabItem>
+    </sftv:SfTabView>
 </ContentPage>
