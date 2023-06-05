@@ -26,7 +26,6 @@ module App =
                 Frame(
                     Label("Hello from Fabulous v2!")
                         .centerTextHorizontal()
-                        .centerTextVertical()
                 )
             )
                 .padding(50.)
