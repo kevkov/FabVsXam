@@ -27,43 +27,52 @@
 
     <sftv:SfTabView TabHeight="36" VisibleHeaderCount="3">
         <sftv:SfTabView.SelectionIndicatorSettings>
-            <sftv:SelectionIndicatorSettings StrokeThickness="0"/>
+            <sftv:SelectionIndicatorSettings StrokeThickness="0" />
         </sftv:SfTabView.SelectionIndicatorSettings>
-        <sftv:SfTabItem Title="Call" >
+        <sftv:SfTabItem Title="Call">
             <sftv:SfTabItem.HeaderContent>
-                <sfbor:SfBorder CornerRadius="10." BorderColor="LightGray" HasShadow="True">
-                    <Grid BackgroundColor="White">
+                <Grid>
+                    <sfbor:SfBorder CornerRadius="10, 0, 0, 10" BorderColor="LightGray" BackgroundColor="LightGray">
+                        <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
+                    </sfbor:SfBorder>
+                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="White">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
-                    </Grid>
-                </sfbor:SfBorder>
+                    </sfbor:SfBorder>
+                </Grid>
             </sftv:SfTabItem.HeaderContent>
-            
+
             <sftv:SfTabItem.Content>
                 <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
             </sftv:SfTabItem.Content>
         </sftv:SfTabItem>
         <sftv:SfTabItem Title="Favorites">
             <sftv:SfTabItem.HeaderContent>
-                <sfbor:SfBorder Padding="-10, 0, 0, 0" BackgroundColor="LightGray" BorderColor="LightGray">
-                    <Grid>
+                <Grid>
+                    <sfbor:SfBorder BorderColor="LightGray" BackgroundColor="LightGray">
+                        <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
+                    </sfbor:SfBorder>
+                    <sfbor:SfBorder BorderColor="LightGray" BackgroundColor="LightGray">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
-                    </Grid>
-                </sfbor:SfBorder>
+                    </sfbor:SfBorder>
+                </Grid>
             </sftv:SfTabItem.HeaderContent>
-            
+
             <sftv:SfTabItem.Content>
                 <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
             </sftv:SfTabItem.Content>
         </sftv:SfTabItem>
         <sftv:SfTabItem Title="Contacts">
             <sftv:SfTabItem.HeaderContent>
-                <sfbor:SfBorder CornerRadius="10." BorderColor="LightGray">
-                    <Grid>
+                <Grid>
+                    <sfbor:SfBorder CornerRadius="0, 10, 10, 0" BorderColor="LightGray" BackgroundColor="LightGray">
+                        <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
+                    </sfbor:SfBorder>
+                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="LightGray">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
-                    </Grid>
-                </sfbor:SfBorder>
+                    </sfbor:SfBorder>
+                </Grid>
             </sftv:SfTabItem.HeaderContent>
-            
+
             <sftv:SfTabItem.Content>
                 <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
             </sftv:SfTabItem.Content>
