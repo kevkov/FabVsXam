@@ -10,6 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="21.2.9" />
         <PackageReference Include="Syncfusion.Xamarin.Core" Version="21.2.9" />
         <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="21.2.9" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
