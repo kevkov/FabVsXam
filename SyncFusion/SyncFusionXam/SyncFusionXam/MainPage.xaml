@@ -35,7 +35,7 @@
                     <sfbor:SfBorder CornerRadius="10, 0, 0, 10" BorderColor="LightGray" BackgroundColor="LightGray">
                         <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
                     </sfbor:SfBorder>
-                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="White">
+                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="LightGray">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
                     </sfbor:SfBorder>
                 </Grid>
@@ -47,14 +47,24 @@
         </sftv:SfTabItem>
         <sftv:SfTabItem Title="Favorites">
             <sftv:SfTabItem.HeaderContent>
-                <Grid>
-                    <sfbor:SfBorder BorderColor="LightGray" BackgroundColor="LightGray">
+                <Grid ColumnDefinitions="1, *, 1" RowDefinitions="*,*,*,*" ColumnSpacing="0" RowSpacing="0">
+                    <BoxView BackgroundColor="LightGray" Grid.Column="0" Grid.Row="0"></BoxView>
+                    <BoxView BackgroundColor="LightGray" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"></BoxView>
+                    <BoxView BackgroundColor="LightGray" Grid.Column="0" Grid.Row="3"></BoxView>
+                    <sfbor:SfBorder BorderColor="LightGray" BackgroundColor="LightGray"
+                                    Grid.Column="1" Grid.RowSpan="4">
                         <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
                     </sfbor:SfBorder>
-                    <sfbor:SfBorder BorderColor="LightGray" BackgroundColor="LightGray">
+                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="White"
+                                    Grid.Column="1" Grid.RowSpan="4">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
                     </sfbor:SfBorder>
+                    <BoxView BackgroundColor="LightGray" Grid.Column="2" Grid.Row="0"></BoxView>
+                    <BoxView BackgroundColor="LightGray" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"></BoxView>
+                    <BoxView BackgroundColor="LightGray" Grid.Column="2" Grid.Row="3"></BoxView>
+                    
                 </Grid>
+
             </sftv:SfTabItem.HeaderContent>
 
             <sftv:SfTabItem.Content>
@@ -67,10 +77,11 @@
                     <sfbor:SfBorder CornerRadius="0, 10, 10, 0" BorderColor="LightGray" BackgroundColor="LightGray">
                         <!-- <Label Background="LightGray" VerticalOptions="Center" HorizontalOptions="Center">Header</Label> -->
                     </sfbor:SfBorder>
-                    <sfbor:SfBorder CornerRadius="10" BorderColor="LightGray" BackgroundColor="LightGray">
+                    <sfbor:SfBorder  CornerRadius="10" BorderColor="LightGray" BackgroundColor="LightGray">
                         <Label VerticalOptions="Center" HorizontalOptions="Center">Header</Label>
                     </sfbor:SfBorder>
-                </Grid>
+                </Grid>                
+                
             </sftv:SfTabItem.HeaderContent>
 
             <sftv:SfTabItem.Content>
